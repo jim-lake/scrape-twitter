@@ -90,6 +90,7 @@ const parseTweet = ($, element) => {
   const _untouchedText = $(element).find('.tweet-text').first().text()
 
   const screenName = $(element).attr('data-screen-name')
+  const name = $(element).attr('data-name')
   const userId = $(element).attr('data-user-id')
   const id = $(element).attr('data-item-id')
   const text = parseText($, $(element).find('.tweet-text').first())
@@ -129,6 +130,7 @@ const parseTweet = ($, element) => {
 
   const tweet = {
     screenName,
+    name,
     userId,
     id,
     time,

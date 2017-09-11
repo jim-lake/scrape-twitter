@@ -122,6 +122,7 @@ var parseTweet = function parseTweet($, element) {
   var _untouchedText = $(element).find('.tweet-text').first().text();
 
   var screenName = $(element).attr('data-screen-name');
+  var name = $(element).attr('data-name');
   var userId = $(element).attr('data-user-id');
   var id = $(element).attr('data-item-id');
   var text = parseText($, $(element).find('.tweet-text').first());
@@ -161,6 +162,7 @@ var parseTweet = function parseTweet($, element) {
 
   var tweet = {
     screenName: screenName,
+    name: name,
     userId: userId,
     id: id,
     time: time,
